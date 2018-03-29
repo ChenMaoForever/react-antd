@@ -1,5 +1,5 @@
 node_modules/**
 dist/**
-#app/**
+app/**
 build/**
 app/vconsole.min.js

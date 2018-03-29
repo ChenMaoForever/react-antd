@@ -1,5 +1,5 @@
 /**
- * Created by dell on 2017/11/13.
+ * Created by chenmao on 2017/11/13.
  */
 import React, {Component} from 'react'
 import RouteMap from '../routes/route'

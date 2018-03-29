@@ -23,6 +23,16 @@ const HomePage = () => (// 首页
   </Bundle>
 )
 
+const walletPage = () => (// 首页
+    <Bundle load={() => import('../views/wallet/wallet')}>
+        {(Component) => <Component />}
+    </Bundle>
+)
+const optionPage = () => (// 首页
+    <Bundle load={() => import('../views/option/option')}>
+        {(Component) => <Component />}
+    </Bundle>
+)
 class RouteConfig extends PureComponent {
   componentDidMount() {
 
@@ -31,10 +41,9 @@ class RouteConfig extends PureComponent {
     return (
       <Router>
         <ScrollToTop>
-          <Switch>
-            <Route exact path={`/`} component={HomePage}></Route>
-            <Redirect to={`/`} />
-          </Switch>
+            <Route path={`/`} component={HomePage}></Route>
+            <Route path={`/wallet`} component={walletPage}></Route>
+            <Route path={`/option`} component={optionPage}></Route>
         </ScrollToTop>
       </Router>
     )

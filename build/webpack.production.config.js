@@ -4,6 +4,7 @@
 const webpack = require('webpack')
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const base = require('./webpack.config.base')
 const config = require('../config')
 
@@ -33,7 +34,8 @@ base.plugins =base.plugins.concat([
 	}),
 	new HtmlWebpackPlugin({
 		template: path.resolve(__dirname, '../app/index.html')
-	})
+	}),
+	new CleanWebpackPlugin([path.join(__dirname, 'dist')])
 ]);
 
 module.exports = base;

@@ -15,7 +15,7 @@ const baseConfig=require('./webpack.config.base');
 const dllPath = path.join(process.cwd(), `node_modules/${config.title}-dlls`)
 const dllPlugin=config.dll;
 
-baseConfig.output.publicPath='/flagship';
+baseConfig.output.publicPath='';
 baseConfig.devtool='source-map';
 
 // Plugins Configuration
